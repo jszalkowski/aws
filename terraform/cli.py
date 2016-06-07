@@ -27,6 +27,7 @@ def _call_terraform(command, work_dir, tf_aws_region, tf_s3_bucket, tf_s3_key):
     with lcd(work_dir):
         __remote_config(tf_aws_region, tf_s3_bucket, tf_s3_key)
         local("terraform remote pull")
+        local("terraform get")
         local(command)
         local("terraform remote push")
 
