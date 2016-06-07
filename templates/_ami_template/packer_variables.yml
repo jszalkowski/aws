@@ -1,0 +1,5 @@
+---
+base_ami: ami-67b75e06
+# use ubuntu AMI
+#ssh_username: ubuntu
+#sftp_command: /usr/lib/sftp-server -e

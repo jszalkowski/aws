@@ -7,6 +7,3 @@
 
 - name: install latest version git package
   yum: name=git state=latest
-
-#- name: remove the git package
-#  yum: name=httpd state=absent

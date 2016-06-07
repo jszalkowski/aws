@@ -1,6 +1,7 @@
 # Timezone 関係の設定
-- name: set zone to /etc/sysconfig/clock
-  replace: dest=/etc/sysconfig/clock regexp='^ZONE=\"UTC\"' replace='ZONE="{{zone}}"'
-
-- name: create symbolic link /etc/localtime
-  file: src={{zoneinfo_path}} dest=/etc/localtime state=link force=yes
+- name: set timezone
+  lineinfile: >
+    dest=/etc/cloud/cloud.cfg
+    regexp='timezone\:'
+    line="timezone: {{zone}}"
+    insertbefore='^# vim\:syntax=yaml'

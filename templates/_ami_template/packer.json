@@ -2,7 +2,9 @@
   "variables": {
     "aws_access_key" : "",
     "aws_secret_key" : "",
-    "base_ami" : "ami-67b75e06"
+    "base_ami" : "",
+    "ssh_username" : "ec2-user",
+    "sftp_command": "/usr/libexec/openssh/sftp-server"
   },
   "builders": [{
     "type": "amazon-ebs",
@@ -11,13 +13,13 @@
     "region": "ap-northeast-1",
     "source_ami": "{{user `base_ami`}}",
     "instance_type": "t2.micro",
-    "ssh_username": "ec2-user",
+    "ssh_username": "{{user `ssh_username`}}",
     "ami_name": "nginx-{{timestamp}}"
   }],
   "provisioners": [{
     "type": "ansible",
-    "user": "ec2-user",
-    "sftp_command": "/usr/libexec/openssh/sftp-server",
+    "user": "{{user `ssh_username`}}",
+    "sftp_command": "{{user `sftp_command`}}",
     "playbook_file": "site.yml"
   }]
 }

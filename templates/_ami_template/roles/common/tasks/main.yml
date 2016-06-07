@@ -1,1 +1,1 @@
-- include: httpd.yml
+- include: nginx.yml

@@ -5,5 +5,6 @@
 terraform.tfvars
 terraform.tfstate
 terraform.tfstate.backup
+aws_credentials.yml
 packer_variables.json
 site.retry
