@@ -1,0 +1,3 @@
+# nginx handlers
+- name: restart nginx service
+  service: name=httpd state=restarted

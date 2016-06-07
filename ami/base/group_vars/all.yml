@@ -1,0 +1,4 @@
+# 全サーバの共通変数
+
+users:
+  - { name: "tomomi", password: "$1$acxKwOAB$MHC1w/33.T.GQkcp2mo3n1" }

@@ -1,0 +1,12 @@
+# パッケージ管理
+- name: set repo_upgrade to /etc/cloud/cloud.cfg
+  lineinfile: 'dest=/etc/cloud/cloud.cfg regexp="repo_upgrade\:" line="repo_upgrade: {{repo_upgrade}}"'
+
+- name: upgrade all packages
+  yum: name=* state=latest
+
+- name: install latest version git package
+  yum: name=git state=latest
+
+#- name: remove the git package
+#  yum: name=httpd state=absent
