@@ -1,0 +1,4 @@
+---
+base_ami: ami-78967519
+ssh_username: ubuntu
+sftp_command: /usr/lib/sftp-server -e

@@ -1,0 +1,9 @@
+# Locale の設定
+- name: install Japanese Language Pack
+  apt: name=language-pack-ja state=latest update_cache=yes
+
+- name: set locale
+  lineinfile: >
+    dest=/etc/cloud/cloud.cfg
+    regexp="^locale:"
+    line="locale: {{locale}}"

@@ -1,0 +1,6 @@
+# Timezone の設定
+- name: set timezone
+  lineinfile: >
+    dest=/etc/cloud/cloud.cfg
+    regex="^timezone\:"
+    line="timezone: {{zone}}"
