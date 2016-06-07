@@ -3,5 +3,5 @@ module "hello" {
   source = "./functions/hello"
 
   s3_bucket = "${terraform_remote_state.bootstrap.output.s3_bucket_private}"
-  role_arn = "${aws_iam_role.lambda_basic_role.arn}"
+  role_arn = "${module.lambda_basic_role.role_arn}"
 }
