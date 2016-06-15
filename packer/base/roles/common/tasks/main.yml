@@ -1,3 +1,4 @@
 - include: package.yml
+- include: python.yml
 - include: locale.yml
 - include: timezone.yml

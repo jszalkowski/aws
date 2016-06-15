@@ -1,5 +1,4 @@
-# -- terraform用のIAM定義 --
-
+# -- IAM定義 --
 # ユーザー定義
 resource "aws_iam_user" "terraform" {
   name = "terraform"

@@ -1,6 +1,6 @@
 {
   "variables": {
-    "ami_name": "nginx-{{isotime \"20060102-030405\"}}",
+    "ami_name": "onetime-base-{{isotime \"20060102-030405\"}}",
     "aws_access_key" : "",
     "aws_secret_key" : "",
     "base_ami" : "",

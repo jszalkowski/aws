@@ -1,0 +1,6 @@
+# Python の設定
+- name: update pip
+  pip: name=pip state=latest
+
+- name: install python library virtualenv
+  pip: name=virtualenv state=latest

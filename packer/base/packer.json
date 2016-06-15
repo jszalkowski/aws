@@ -1,5 +1,6 @@
 {
   "variables": {
+    "ami_name": "base-{{isotime \"20060102-030405\"}}",
     "aws_access_key" : "",
     "aws_secret_key" : "",
     "base_ami" : "",
@@ -14,7 +15,10 @@
     "source_ami": "{{user `base_ami`}}",
     "instance_type": "t2.micro",
     "ssh_username": "{{user `ssh_username`}}",
-    "ami_name": "base-{{timestamp}}"
+    "ami_name": "{{user `ami_name`}}",
+    "tags": {
+      "Name": "{{user `ami_name`}}"
+    }
   }],
   "provisioners": [{
     "type": "ansible",

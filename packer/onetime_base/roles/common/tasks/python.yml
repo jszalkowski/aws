@@ -1,0 +1,3 @@
+# Python の設定
+- name: install python library boto3
+  pip: name=boto3 state=latest

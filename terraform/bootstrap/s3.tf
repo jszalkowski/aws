@@ -1,4 +1,4 @@
-# S3 Settings
+# -- S3定義 --
 resource "aws_s3_bucket" "kajip_private" {
   bucket = "kajip-private"
   acl = "private"
@@ -11,6 +11,7 @@ resource "aws_s3_bucket" "kajip_private" {
 resource "aws_s3_bucket" "kajip_private_logging" {
   bucket = "kajip-private-logging"
   acl = "log-delivery-write"
+  policy = "${file("policies/s3_bucket_logging.json")}"
 
   lifecycle_rule {
     id = "log"

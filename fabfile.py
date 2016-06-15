@@ -1,5 +1,5 @@
 # -*- encoding:utf-8 -*-
 
 import terraform
-import ami
+import packer
 import lambda_function
